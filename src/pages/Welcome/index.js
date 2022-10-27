@@ -9,29 +9,35 @@ import {
 
  import * as Animatable from 'react-native-animatable'
 
+ import { useNavigation } from '@react-navigation/native';
+
 export default function Welcome() {
- return (
-    <View style={styles.container}>
+    const navigation = useNavigation();
+    return (
+        <View style={styles.container}>
 
-        <View style={styles.containerLogo}>
-            <Animatable.Image
-            animation='flipInY'
-            source={require('../../assets/pata.png')}
-            style={{width: '60%'}}
-            resizeMode='contain'
-        />
-        </View> 
+            <View style={styles.containerLogo}>
+                <Animatable.Image
+                animation='flipInY'
+                source={require('../../assets/pata.png')}
+                style={{width: '60%'}}
+                resizeMode='contain'
+            />
+            </View> 
 
-        <Animatable.View delay={600} animation="fadeInUp" style={styles.containerForm}>
-            <Text style={styles.title}>Ajude as OGNs protetoras de animais da cidade de Picos</Text>
-            <Text style={styles.text}>Faça o login para começar</Text>
+            <Animatable.View delay={600} animation="fadeInUp" style={styles.containerForm}>
+                <Text style={styles.title}>Ajude as OGNs protetoras de animais da cidade de Picos</Text>
+                <Text style={styles.text}>Faça o login para começar</Text>
 
-            <TouchableOpacity style={styles.button}>
-                <Text style={styles.buttonText}>Acessar</Text>
-            </TouchableOpacity>
-        </Animatable.View>
-    </View>
- );
+                <TouchableOpacity 
+                style={styles.button}
+                onPress={ ( ) => navigation.navigate('SignIn')}
+                >
+                    <Text style={styles.buttonText}>Acessar</Text>
+                </TouchableOpacity>
+            </Animatable.View>
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
