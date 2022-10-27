@@ -76,17 +76,19 @@ const styles = StyleSheet.create ({
     },
     button: {
         backgroundColor: '#F29D35',
-        width: '100%',
-        borderRadius: 4,
+        width: '60%',
+        borderRadius: 50,
         paddingVertical: 8,
         marginTop: 14,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        alignSelf: 'center',
     },
     buttonText: {
         color: '#fff',
-        fontSize: 14,
+        fontSize: 18,
         alignSelf: 'center',
+        fontWeight: 'bold',
     },
     buttonRegister: {
         marginTop: 14,
