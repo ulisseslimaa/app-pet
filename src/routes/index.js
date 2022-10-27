@@ -18,7 +18,6 @@ export default function Routes(){
             component={SignIn}
             options={{headerShown: false}}
             />
-            
         </Stack.Navigator>
-    )
+    );
 }
